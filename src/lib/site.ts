@@ -18,7 +18,7 @@ export const socials = {
   // Email utilisé partout (contact, mailto du formulaire, footer)
   email: "amoussoupeace266@gmail.com",
   // Laissez "" tant que non disponible — le lien sera masqué
-  github: "",
+  github: "https://github.com/luffyone09",
   linkedin: "",
   whatsapp: "",
 } as const;
