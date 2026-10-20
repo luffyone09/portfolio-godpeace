@@ -89,4 +89,56 @@ export const journeyEntries: JourneyEntry[] = [
       en: "Current final year at UCAO: advanced specialization, technical projects (IoT, supervision) and preparation of the final-year project.",
     },
   },
+  {
+    id: "skills-2024",
+    badge: { fr: "Compétences", en: "Skills" },
+    title: {
+      fr: "Approfondissement technique",
+      en: "Deepening technical skills",
+    },
+    period: "2024 — 2025",
+    description: {
+      fr: "Informatique industrielle, électronique, automatisme, programmation, systèmes embarqués, maintenance et réseaux informatiques — avec les premiers projets pratiques en application directe de la formation.",
+      en: "Industrial computing, electronics, automation, programming, embedded systems, maintenance and computer networks — with the first hands-on projects applying what I learned.",
+    },
+  },
+  {
+    id: "projects-2025",
+    badge: { fr: "Projets", en: "Projects" },
+    title: {
+      fr: "Projets et expériences pratiques",
+      en: "Hands-on projects",
+    },
+    period: "2025 — 2026",
+    description: {
+      fr: "Développement de projets mêlant informatique, automatisation, IoT et développement web. Intérêt croissant pour la création de solutions numériques et de projets personnels.",
+      en: "Building projects mixing computing, automation, IoT and web development. A growing interest in creating digital solutions and personal projects.",
+    },
+  },
+  {
+    id: "pfe",
+    badge: { fr: "Projet", en: "Project" },
+    title: {
+      fr: "Projet de fin d'études — Système intelligent de gestion énergétique (IoT)",
+      en: "Final year project — Smart IoT-based energy management system",
+    },
+    period: "2026",
+    description: {
+      fr: "Conception d'un système gérant intelligemment plusieurs sources d'énergie (solaire, SBEE, groupe électrogène) : ESP32, capteurs, relais, IoT, automatisation, supervision web et analyse des données.",
+      en: "Designing a system that intelligently manages multiple energy sources (solar, SBEE grid, generator): ESP32, sensors, relays, IoT, automation, web supervision and data analysis.",
+    },
+  },
+  {
+    id: "horizons",
+    badge: { fr: "Objectifs", en: "Goals" },
+    title: {
+      fr: "Vers de nouveaux horizons",
+      en: "Toward new horizons",
+    },
+    period: "2026 →",
+    description: {
+      fr: "Développement continu : web, SaaS, IoT, cloud, DevOps, réseaux et cybersécurité. Objectif : transformer mes connaissances techniques en solutions numériques concrètes, modernes et utiles.",
+      en: "Continuous growth: web, SaaS, IoT, cloud, DevOps, networks and cybersecurity. Goal: turn my technical knowledge into concrete, modern and useful digital solutions.",
+    },
+  },
 ];
