@@ -11,7 +11,7 @@ export const siteIdentity = {
   logo: "GP.",
   photo: "/godpeace.jpg",
   // CV : déposez "cv.pdf" dans /public/ puis mettez "/cv.pdf" (null = bouton masqué)
-  cv: null as string | null,
+  cv: "/cv.pdf",
 };
 
 export const socials = {
@@ -24,11 +24,10 @@ export const socials = {
 } as const;
 
 /* ============================================================
-   FORMULAIRE DE CONTACT
-   Pour activer l'envoi réel, renseignez une des options :
-   - Formspree :  "https://formspree.io/f/VOTRE_ID"
-   - Resend :     votre propre endpoint API "/api/contact"
-   - Firebase :   votre fonction callable
-   Vide = fallback mailto (aucun faux "message envoyé").
+   FORMULAIRE DE CONTACT — activé via /api/contact (Resend)
+   Il suffit de définir la variable d'environnement RESEND_API_KEY
+   (resend.com). Sans clé, le formulaire retombe automatiquement
+   sur le client email (mailto). CONTACT_EMAIL (optionnel) change
+   la boîte de réception.
    ============================================================ */
-export const contactEndpoint = "";
+export const contactEndpoint = "/api/contact";

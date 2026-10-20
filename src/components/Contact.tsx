@@ -43,17 +43,6 @@ export function Contact() {
     e.preventDefault();
     if (!validate()) return;
 
-    if (!contactEndpoint) {
-      // Fallback réel : ouvre le client email pré-rempli. Aucun faux "envoyé".
-      const body = `${t.form.name}: ${values.name}\n${t.form.email}: ${values.email}\n\n${values.message}`;
-      const href = `mailto:${socials.email}?subject=${encodeURIComponent(
-        values.subject
-      )}&body=${encodeURIComponent(body)}`;
-      window.location.href = href;
-      setStatus("mailto");
-      return;
-    }
-
     try {
       setStatus("sending");
       const res = await fetch(contactEndpoint, {
@@ -61,12 +50,30 @@ export function Contact() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(values),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json().catch(() => null);
+      if (!res.ok) {
+        // Service d'envoi non configuré (code not_configured) : ouvre le client
+        // email pré-rempli. Aucun faux "envoyé".
+        if (data?.code === "not_configured") {
+          openMailto();
+          return;
+        }
+        throw new Error(`HTTP ${res.status}`);
+      }
       setStatus("sent");
       setValues({ name: "", email: "", subject: "", message: "" });
     } catch {
       setStatus("error");
     }
+  }
+
+  function openMailto() {
+    const body = `${t.form.name}: ${values.name}\n${t.form.email}: ${values.email}\n\n${values.message}`;
+    const href = `mailto:${socials.email}?subject=${encodeURIComponent(
+      values.subject
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+    setStatus("mailto");
   }
 
   function copyEmail() {
