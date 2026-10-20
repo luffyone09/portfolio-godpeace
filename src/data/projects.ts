@@ -66,4 +66,20 @@ export const projects: Project[] = [
     demoUrl: null,
     githubUrl: null,
   },
+  {
+    id: "savanna",
+    index: "04",
+    name: {
+      fr: "Savanna — bibliothèque pédagogique intelligente",
+      en: "Savanna — Smart educational library",
+    },
+    description: {
+      fr: "Plateforme web centralisant cours, épreuves, TD, TP et corrigés expliqués étape par étape dans un langage simple, avec lecteur PDF intégré (zoom, pages, plein écran).",
+      en: "Web platform centralizing courses, exams, tutorials and step-by-step corrections explained in plain language, with an integrated PDF reader (zoom, pages, fullscreen).",
+    },
+    tech: ["React", "Vite", "Tailwind CSS", "pdf.js", "TypeScript"],
+    visual: "platform",
+    demoUrl: "https://savanna.vercel.app",
+    githubUrl: "https://github.com/luffyone09/savanna",
+  },
 ];
