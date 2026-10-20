@@ -6,106 +6,87 @@ export type JourneyEntry = {
   description: { fr: string; en: string };
 };
 
+/* ============================================================
+   PARCOURS — données réelles (source : CV)
+   ============================================================ */
+
 export const journeyEntries: JourneyEntry[] = [
-  {
-    id: "cep",
-    badge: { fr: "Scolarité", en: "Education" },
-    title: {
-      fr: "CEP — Certificat d'Études Primaires",
-      en: "CEP — Primary School Certificate",
-    },
-    period: "2015",
-    description: {
-      fr: "Début de mon parcours scolaire et construction de mes premières bases académiques.",
-      en: "The start of my schooling and the building of my first academic foundations.",
-    },
-  },
   {
     id: "bepc",
     badge: { fr: "Scolarité", en: "Education" },
     title: {
-      fr: "BEPC — Brevet d'Études du Premier Cycle",
-      en: "BEPC — Junior High School Certificate",
+      fr: "Obtention du BEPC",
+      en: "Junior High School Certificate (BEPC)",
     },
-    period: "2019",
+    period: "2017 — 2018",
     description: {
-      fr: "Poursuite de mon parcours secondaire et développement de ma curiosité pour les sciences et les technologies.",
-      en: "Continued secondary education, where my curiosity for science and technology grew.",
+      fr: "Fin du premier cycle secondaire et ouverture vers les matières scientifiques et techniques.",
+      en: "Completion of junior high school and opening up to scientific and technical subjects.",
     },
   },
   {
-    id: "bac",
-    badge: { fr: "Scolarité", en: "Education" },
-    title: { fr: "Baccalauréat", en: "High School Diploma" },
-    period: "2023",
-    description: {
-      fr: "Une étape importante qui m'a permis de m'orienter vers un domaine technique et informatique.",
-      en: "A key milestone that led me toward a technical and computer-science track.",
-    },
-  },
-  {
-    id: "licence",
-    badge: { fr: "Formation", en: "Studies" },
+    id: "cap-el",
+    badge: { fr: "Diplôme technique", en: "Technical diploma" },
     title: {
-      fr: "Licence Professionnelle — Informatique Industrielle et Maintenance (IIM)",
-      en: "Professional Bachelor's Degree — Industrial Computing & Maintenance (IIM)",
+      fr: "Obtention du CAP EL — Électricité",
+      en: "CAP EL — Electricity vocational certificate",
     },
-    period: "2023",
+    period: "2020 — 2021",
     description: {
-      fr: "UCAO-UUC — École du Génie Électrique et Informatique. Début d'une spécialisation en informatique industrielle, électronique, automatisme, systèmes embarqués et maintenance.",
-      en: "UCAO-UUC — School of Electrical and Computer Engineering. Specializing in industrial computing, electronics, automation, embedded systems and maintenance.",
+      fr: "Premier diplôme technique : bases solides en installation et maintenance électrique, confort et sécurité.",
+      en: "First technical diploma: solid foundations in electrical installation and maintenance, comfort and safety.",
     },
   },
   {
-    id: "skills-2024",
-    badge: { fr: "Compétences", en: "Skills" },
+    id: "bac-f3",
+    badge: { fr: "Diplôme technique", en: "Technical diploma" },
     title: {
-      fr: "Approfondissement technique",
-      en: "Deepening technical skills",
+      fr: "Obtention du Baccalauréat F3 — Électrotechnique",
+      en: "High School Diploma (F3) — Electrotechnics",
     },
-    period: "2024",
+    period: "2022 — 2023",
     description: {
-      fr: "Informatique industrielle, électronique, automatisme, programmation, systèmes embarqués, maintenance et réseaux informatiques — avec les premiers projets pratiques en application directe de la formation.",
-      en: "Industrial computing, electronics, automation, programming, embedded systems, maintenance and computer networks — with the first hands-on projects applying what I learned.",
+      fr: "Baccalauréat technique en électrotechnique : électricité, électronique de puissance et machines électriques. Cap vers l'enseignement supérieur technique.",
+      en: "Technical high school diploma in electrotechnics: electricity, power electronics and electrical machines. Headed for technical higher education.",
     },
   },
   {
-    id: "projects-2025",
-    badge: { fr: "Projets", en: "Projects" },
+    id: "l1-iim",
+    badge: { fr: "Université", en: "University" },
     title: {
-      fr: "Projets et expériences pratiques",
-      en: "Hands-on projects",
+      fr: "1ère année — Informatique Industrielle et Maintenance (IIM)",
+      en: "1st year — Industrial Computing & Maintenance (IIM)",
     },
-    period: "2025",
+    period: "2023 — 2024",
     description: {
-      fr: "Développement de projets mêlant informatique, automatisation, IoT et développement web. Intérêt croissant pour la création de solutions numériques et de projets personnels.",
-      en: "Building projects mixing computing, automation, IoT and web development. A growing interest in creating digital solutions and personal projects.",
+      fr: "Début du cursus à l'Université Catholique de l'Afrique de l'Ouest (UCAO) : informatique, électronique, automatisme et systèmes industriels.",
+      en: "Started the program at the Catholic University of West Africa (UCAO): computing, electronics, automation and industrial systems.",
     },
   },
   {
-    id: "pfe",
-    badge: { fr: "Projet", en: "Project" },
+    id: "l2-iim",
+    badge: { fr: "Université", en: "University" },
     title: {
-      fr: "Projet de fin de formation — Système intelligent de gestion énergétique (IoT)",
-      en: "Final year project — Smart IoT-based energy management system",
+      fr: "2ème année — Informatique Industrielle et Maintenance (IIM)",
+      en: "2nd year — Industrial Computing & Maintenance (IIM)",
     },
-    period: "2026",
+    period: "2024 — 2025",
     description: {
-      fr: "Conception d'un système gérant intelligemment plusieurs sources d'énergie (solaire, SBEE, groupe électrogène) : ESP32, capteurs, relais, IoT, automatisation, supervision web et analyse des données.",
-      en: "Designing a system that intelligently manages multiple energy sources (solar, SBEE grid, generator): ESP32, sensors, relays, IoT, automation, web supervision and data analysis.",
+      fr: "Approfondissement à l'UCAO : programmation, réseaux, maintenance industrielle et premiers projets pratiques appliqués.",
+      en: "Advanced coursework at UCAO: programming, networks, industrial maintenance and first practical hands-on projects.",
     },
   },
   {
-    id: "horizons",
-    badge: { fr: "Objectifs", en: "Goals" },
+    id: "l3-iim",
+    badge: { fr: "Université", en: "University" },
     title: {
-      fr: "Vers de nouveaux horizons",
-      en: "Toward new horizons",
+      fr: "3ème année — Informatique Industrielle et Maintenance (IIM)",
+      en: "3rd year — Industrial Computing & Maintenance (IIM)",
     },
-    period: "2026",
+    period: "2025 — 2026",
     description: {
-      fr: "Développement continu : web, SaaS, IoT, cloud, DevOps, réseaux et cybersécurité. Objectif : transformer mes connaissances techniques en solutions numériques concrètes, modernes et utiles.",
-      en: "Continuous growth: web, SaaS, IoT, cloud, DevOps, networks and cybersecurity. Goal: turn my technical knowledge into concrete, modern and useful digital solutions.",
+      fr: "Année en cours à l'UCAO : spécialisation avancée, projets techniques (IoT, supervision) et préparation du projet de fin d'études.",
+      en: "Current final year at UCAO: advanced specialization, technical projects (IoT, supervision) and preparation of the final-year project.",
     },
   },
 ];
