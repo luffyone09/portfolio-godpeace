@@ -1,0 +1,12 @@
+{
+  "tag": "About",
+  "title": "About me",
+  "paragraphs": [
+    "I am God-Peace AMOUSSOU, passionate about digital technologies, software development and intelligent systems.",
+    "My background in industrial computing and maintenance has led me to an approach combining programming, electronics, automation and connected systems.",
+    "I am particularly interested in web development, IoT, cloud, automation and cybersecurity."
+  ],
+  "photoAlt": "Professional photo of God-Peace AMOUSSOU",
+  "cvButton": "Download my CV",
+  "cvUnavailable": "CV coming soon"
+}

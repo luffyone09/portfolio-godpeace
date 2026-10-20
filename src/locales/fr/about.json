@@ -1,0 +1,12 @@
+{
+  "tag": "À propos",
+  "title": "À propos de moi",
+  "paragraphs": [
+    "Je suis God-Peace AMOUSSOU, passionné par les technologies numériques, le développement logiciel et les systèmes intelligents.",
+    "Mon parcours en informatique industrielle et maintenance m'a permis de développer une approche combinant programmation, électronique, automatisation et systèmes connectés.",
+    "Je m'intéresse particulièrement au développement web, à l'IoT, au cloud, à l'automatisation et à la cybersécurité."
+  ],
+  "photoAlt": "Photo professionnelle de God-Peace AMOUSSOU",
+  "cvButton": "Télécharger mon CV",
+  "cvUnavailable": "CV bientôt disponible"
+}

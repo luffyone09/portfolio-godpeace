@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "journey": "Journey",
+    "contact": "Contact"
+  },
+  "actions": {
+    "contactMe": "Contact me",
+    "viewProjects": "View my projects",
+    "send": "Send message",
+    "skipToContent": "Skip to content"
+  },
+  "availability": {
+    "badge": "Available for projects"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
+  "lang": {
+    "label": "Language",
+    "fr": "Français",
+    "en": "English"
+  },
+  "menu": {
+    "open": "Open menu",
+    "close": "Close menu"
+  },
+  "scroll": {
+    "indicator": "Scroll"
+  }
+}

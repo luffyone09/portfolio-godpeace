@@ -1,26 +1,260 @@
 @import "tailwindcss";
 
+/* ============================================
+   DESIGN TOKENS — Dark (default) / Light
+   ============================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #060609;
+  --bg-elev: #0b0b11;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-hover: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #eeedf6;
+  --text-2: #a3a1b8;
+  --text-3: #6f6d85;
+  --accent: #7c6aff;
+  --accent-2: #a78bfa;
+  --teal: #4dffd2;
+  --glow-accent: rgba(124, 106, 255, 0.28);
+  --glow-teal: rgba(77, 255, 210, 0.18);
+  --glass: rgba(10, 10, 16, 0.72);
+  --noise-opacity: 0.5;
+
+  --font-display: var(--font-syne), "Georgia", serif;
+  --font-body: var(--font-dm), system-ui, sans-serif;
+  --font-mono: var(--font-jet), "Courier New", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="light"] {
+  --bg: #f7f6fd;
+  --bg-elev: #ffffff;
+  --surface: rgba(13, 12, 26, 0.03);
+  --surface-hover: rgba(13, 12, 26, 0.055);
+  --border: rgba(13, 12, 26, 0.09);
+  --border-strong: rgba(13, 12, 26, 0.18);
+  --text: #12111f;
+  --text-2: #55536e;
+  --text-3: #8b89a6;
+  --accent: #6455e6;
+  --accent-2: #8b5cf6;
+  --teal: #0b8f76;
+  --glow-accent: rgba(100, 85, 230, 0.16);
+  --glow-teal: rgba(11, 143, 118, 0.12);
+  --glass: rgba(255, 255, 255, 0.78);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Global smooth theme transition (never brutal) */
+body,
+body::before,
+nav,
+footer,
+section,
+input,
+textarea,
+button,
+a,
+.card-surface,
+.glass {
+  transition-property: background-color, color, border-color, box-shadow;
+  transition-duration: 0.45s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Noise texture "less but better" */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: var(--noise-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ============================================
+   FOCUS VISIBLE — accessibility
+   ============================================ */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-gradient {
+  background: linear-gradient(120deg, var(--accent-2), var(--teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+
+.card-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition:
+    transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 0.5s,
+    box-shadow 0.5s, background-color 0.45s;
+}
+
+.card-surface:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow:
+    0 20px 60px -24px var(--glow-accent),
+    0 0 0 1px var(--border);
+}
+
+.section-pad {
+  padding-top: clamp(5rem, 10vw, 8.5rem);
+  padding-bottom: clamp(5rem, 10vw, 8.5rem);
+}
+
+.container-gp {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+.section-tag::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.field-input {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    background-color 0.45s;
+}
+
+.field-input::placeholder {
+  color: var(--text-3);
+}
+
+.field-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--glow-accent);
+  background: var(--surface-hover);
+}
+
+/* ============================================
+   CUSTOM CURSOR — desktop only
+   ============================================ */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-dot,
+  .cursor-ring {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 90;
+    border-radius: 999px;
+    transform: translate(-50%, -50%);
+  }
+  .cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--teal);
+  }
+  .cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--border-strong);
+    transition:
+      width 0.25s,
+      height 0.25s,
+      border-color 0.25s,
+      background-color 0.25s;
+  }
+  .cursor-ring.hover {
+    width: 56px;
+    height: 56px;
+    border-color: var(--accent);
+    background: var(--glow-accent);
+  }
+}
+
+@media not ((hover: hover) and (pointer: fine)) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION — accessibility
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.15s !important;
+  }
 }

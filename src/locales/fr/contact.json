@@ -1,0 +1,29 @@
+{
+  "tag": "Contact",
+  "title": "Construisons quelque chose ensemble.",
+  "subtitle": "Un projet, une question, une opportunité ? Écrivez-moi, je réponds dès que possible.",
+  "form": {
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "votre@email.com",
+    "subjectPlaceholder": "De quoi s'agit-il ?",
+    "messagePlaceholder": "Décrivez votre projet ou votre idée…",
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours…",
+    "required": "Champ requis",
+    "invalidEmail": "Adresse email invalide",
+    "success": "Message envoyé. Merci, je vous réponds dès que possible.",
+    "error": "L'envoi a échoué. Vous pouvez m'écrire directement par email.",
+    "notConfigured": "L'envoi n'est pas encore configuré — utilisez l'email ci-dessous.",
+    "mailtoNote": "Votre application e-mail s'est ouverte avec le message pré-rempli."
+  },
+  "direct": {
+    "title": "En direct",
+    "emailLabel": "Email"
+  },
+  "copyEmail": "Copier l'adresse email",
+  "emailCopied": "Copié !"
+}

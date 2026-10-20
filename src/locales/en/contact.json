@@ -1,0 +1,29 @@
+{
+  "tag": "Contact",
+  "title": "Let's build something together.",
+  "subtitle": "A project, a question, an opportunity? Write to me, I reply as soon as I can.",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@email.com",
+    "subjectPlaceholder": "What is it about?",
+    "messagePlaceholder": "Describe your project or idea…",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "required": "Required field",
+    "invalidEmail": "Invalid email address",
+    "success": "Message sent. Thank you, I will reply as soon as possible.",
+    "error": "Sending failed. You can email me directly instead.",
+    "notConfigured": "Sending is not configured yet — please use the email below.",
+    "mailtoNote": "Your email app opened with the pre-filled message."
+  },
+  "direct": {
+    "title": "Direct line",
+    "emailLabel": "Email"
+  },
+  "copyEmail": "Copy email address",
+  "emailCopied": "Copied!"
+}
