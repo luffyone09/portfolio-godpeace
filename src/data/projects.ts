@@ -79,7 +79,7 @@ export const projects: Project[] = [
     },
     tech: ["React", "Vite", "Tailwind CSS", "pdf.js", "TypeScript"],
     visual: "platform",
-    demoUrl: "https://savanna.vercel.app",
+    demoUrl: "https://savanna-pedagogique.netlify.app",
     githubUrl: "https://github.com/luffyone09/savanna",
   },
 ];
