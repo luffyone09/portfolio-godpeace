@@ -26,6 +26,11 @@ export const skillCategories: SkillCategory[] = [
     items: ["Git", "GitHub", "Docker", "Cloud", "CI/CD"],
   },
   {
+    id: "ai",
+    label: { fr: "IA & Productivité", en: "AI & Productivity" },
+    items: ["AI-Assisted Dev", "Prompt Engineering", "LLM APIs", "AI Automation", "ChatGPT · Claude"],
+  },
+  {
     id: "security",
     label: { fr: "Cybersécurité", en: "Cybersecurity" },
     items: ["Networks", "Linux", "System Security", "Cybersecurity"],

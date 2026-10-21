@@ -25,8 +25,8 @@ export const processSteps: ProcessStep[] = [
     id: "build",
     title: { fr: "Développer", en: "Build" },
     description: {
-      fr: "Coder proprement, par petites itérations testables et documentées.",
-      en: "Write clean code in small, testable and documented iterations.",
+      fr: "Coder proprement en petites itérations testables, avec l'IA comme accélérateur : revue, tests, documentation et automatisation.",
+      en: "Write clean code in small testable iterations, with AI as an accelerator: review, tests, documentation and automation.",
     },
   },
   {

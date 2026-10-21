@@ -3,13 +3,14 @@
 import { useI18n } from "@/i18n/I18nProvider";
 import { skillCategories } from "@/data/skills";
 import { Reveal } from "./ui/Reveal";
-import { IconCode, IconDatabase, IconCpu, IconCloud, IconShield } from "./icons";
+import { IconCode, IconDatabase, IconCpu, IconCloud, IconShield, IconSpark } from "./icons";
 
 const CATEGORY_ICONS: Record<string, typeof IconCode> = {
   dev: IconCode,
   backend: IconDatabase,
   iot: IconCpu,
   devops: IconCloud,
+  ai: IconSpark,
   security: IconShield,
 };
 
