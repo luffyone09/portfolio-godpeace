@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, DM_Sans, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { locales, isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -13,9 +13,24 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Preloader } from "@/components/ui/Preloader";
 import "../globals.css";
 
-const display = Sora({ subsets: ["latin"], variable: "--font-syne", weight: ["600", "700", "800"] });
-const body = DM_Sans({ subsets: ["latin"], variable: "--font-dm", weight: ["400", "500"] });
-const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jet", weight: ["400", "500"] });
+const display = localFont({
+  src: "../fonts/Sora.woff2",
+  variable: "--font-syne",
+  weight: "200 800",
+  display: "swap",
+});
+const body = localFont({
+  src: "../fonts/DMSans.woff2",
+  variable: "--font-dm",
+  weight: "100 900",
+  display: "swap",
+});
+const mono = localFont({
+  src: "../fonts/JetBrainsMono.woff2",
+  variable: "--font-jet",
+  weight: "100 800",
+  display: "swap",
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
